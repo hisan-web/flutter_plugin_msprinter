@@ -204,7 +204,7 @@ public class FlutterPluginMsprinterPlugin implements FlutterPlugin, MethodCallHa
     m_sbData = new StringBuilder("微信号：ejeton ");
     mUsbDriver.write(PrintCmd.PrintString(m_sbData.toString(), 0));
     m_sbData = new StringBuilder("http://weixin.qq.com/r/R3VZQQDEi130rUQi9yBV");
-    mUsbDriver.write(PrintCmd.PrintQrcode(unicodeToUtf8(m_sbData.toString()), 10, 5, 0));
+    mUsbDriver.write(PrintCmd.PrintQrcode(m_sbData.toString(), 10, 5, 0));
     mUsbDriver.write(PrintCmd.PrintFeedline(5));
     mUsbDriver.write(PrintCmd.PrintCutpaper(1));
   }
